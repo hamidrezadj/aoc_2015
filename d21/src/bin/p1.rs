@@ -27,8 +27,8 @@ fn main() {
                 .expect("No ': ' pattern in line")
         })
         .map(|stat| {
-            stat.parse()
-                .expect("Stat couldn't fit into an unsigned 64 bit integer")
+            stat.parse::<u16>()
+                .expect("Stat couldn't fit into an unsigned 16 bit integer") as i32
         })
         .collect();
     let boss_status = Status {
