@@ -29,10 +29,6 @@
       devShells.${system}.default = pkgs.mkShell {
         nativeBuildInputs = [
           fenixPackages.stable.completeToolchain
-          # Needed for day 24 part 2 solution.
-          pkgs.pkg-config
-          pkgs.openssl
-          pkgs.openblas
         ];
       };
     };
